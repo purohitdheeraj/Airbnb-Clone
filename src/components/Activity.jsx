@@ -1,19 +1,33 @@
 import React from "react";
-import mountainBike from "../assets/mountain-bike.png";
+import swimming from "../assets/swimming.png";
+import starLogo from "../assets/star.png";
 
 function Activity() {
 	return (
-		<div className="activity">
-			<span>Sold Out</span>
-			<img src={mountainBike} alt="mountain-bike" />
-			<div className="stats">
+		<div className="card">
+			<img
+				className="card-image"
+				src={swimming}
+				alt="Swimming"
+			/>
+			<span className="card-badge">Sold Out</span>
+			<div className="card-stats">
+				<img
+					src={starLogo}
+					alt="star-logo"
+					className="star-logo"
+				/>
 				<span>5.0</span>
-				<span>(6)</span>
-				<span>.</span>
-				<span>USA</span>
+				<span className="gray">(6)&middot;</span>
+				<span className="gray">USA</span>
 			</div>
-			<p>Life Lessons with Katie</p>
-			<p>From $136 / person</p>
+			<p>Life Lessons with Katie Zaferes</p>
+			<p>
+				<strong>
+					From <span>$136</span>
+				</strong>{" "}
+				/ Person
+			</p>
 		</div>
 	);
 }

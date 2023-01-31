@@ -4,7 +4,6 @@ import Activity from "./Activity";
 function Activities() {
 	return (
 		<section className="activities">
-			
 			<Activity />
 		</section>
 	);
