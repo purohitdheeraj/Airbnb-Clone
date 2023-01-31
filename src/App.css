@@ -1,12 +1,51 @@
-*{
-  margin: 0;
-  box-sizing: border-box;
+* {
+	margin: 0;
+	box-sizing: border-box;
 }
 
-html{
-  font-size: 62.5%;
+html {
+	font-size: 62.5%;
 }
 
-body{
-  font-size: 1.6rem;
+body {
+	max-width: 128rem;
+	height: 100vh;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	background: rgba(255, 255, 255, 1);
+	font-family: "Poppins", sans-serif;
+}
+
+.navbar-logo {
+	width: 8.2rem;
+}
+
+.navbar {
+	padding: 2.2rem 3rem;
+	height: 7rem;
+	box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+	padding: 2.6rem 3.6rem;
+}
+
+.hero-img {
+	max-width: 39.5rem;
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+
+.hero-title {
+	font-size: 3.6rem;
+	font-weight: 600;
+	line-height: 4rem;
+	margin-top: 3.2rem;
+}
+
+.hero-text {
+	margin-top: 1.6rem;
+	line-height: 1.8rem;
+	max-width: 32rem;
 }

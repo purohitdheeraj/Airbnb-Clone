@@ -1,14 +1,14 @@
 import "./App.css";
-import Header from "./components/Header";
 import HeroBanner from "./components/HeroBanner";
-import ImageTiles from "./components/ImageTiles";
+import Activities from "./components/Activities";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<div className="App">
-			<Header />
+			<Navbar />
 			<HeroBanner />
-			<ImageTiles />
+			<Activities />
 		</div>
 	);
 }
