@@ -1,10 +1,13 @@
 import React from "react";
 import Activity from "./Activity";
+import cardData from "../../data";
 
 function Activities() {
 	return (
 		<section className="activities">
-			<Activity />
+			{cardData.map((card) => {
+				return <Activity key={card.id} {...card} />;
+			})}
 		</section>
 	);
 }

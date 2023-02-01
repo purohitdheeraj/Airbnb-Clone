@@ -1,30 +1,44 @@
 import React from "react";
-import swimming from "../assets/swimming.png";
 import starLogo from "../assets/star.png";
 
-function Activity() {
+function Activity(props) {
+	let displayBadge;
+	if (props.openSpots === 0) {
+		displayBadge = "Sold Out";
+	} else if (props.location === "Online") {
+		displayBadge = "Online";
+	}
+
 	return (
 		<div className="card">
 			<img
 				className="card-image"
-				src={swimming}
-				alt="Swimming"
+				src={`/src/assets/${props.coverImg}`}
+				alt={props.coverImg}
 			/>
-			<span className="card-badge">Sold Out</span>
+			{displayBadge && (
+				<span className="card-badge">
+					{displayBadge}
+				</span>
+			)}
 			<div className="card-stats">
 				<img
 					src={starLogo}
 					alt="star-logo"
 					className="star-logo"
 				/>
-				<span>5.0</span>
-				<span className="gray">(6)&middot;</span>
-				<span className="gray">USA</span>
+				<span>{props.stats.rating}</span>
+				<span className="gray">
+					({props.stats.reviewCount})&middot;
+				</span>
+				<span className="gray">
+					{props.location}
+				</span>
 			</div>
-			<p>Life Lessons with Katie Zaferes</p>
+			<p>{props.title}</p>
 			<p>
 				<strong>
-					From <span>$136</span>
+					From <span>${props.price}</span>
 				</strong>{" "}
 				/ Person
 			</p>
