@@ -13,7 +13,7 @@ function Activity(props) {
 		<div className="card">
 			<img
 				className="card-image"
-				src={`/assets/${props.coverImg}`}
+				src={`./assets/${props.coverImg}`}
 				alt={props.coverImg}
 			/>
 			{displayBadge && (
