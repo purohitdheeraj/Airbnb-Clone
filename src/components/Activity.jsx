@@ -1,9 +1,9 @@
 import React from "react";
-import starLogo from "../assets/star.png";
+import starLogo from "/assets/star.png";
 
 function Activity(props) {
 	let displayBadge;
-	if (props.openSpots === 0) {
+	if (props.openSpot === 0) {
 		displayBadge = "Sold Out";
 	} else if (props.location === "Online") {
 		displayBadge = "Online";
@@ -13,7 +13,7 @@ function Activity(props) {
 		<div className="card">
 			<img
 				className="card-image"
-				src={`/src/assets/${props.coverImg}`}
+				src={`/assets/${props.coverImg}`}
 				alt={props.coverImg}
 			/>
 			{displayBadge && (
